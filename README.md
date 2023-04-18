@@ -10,4 +10,4 @@ All my projects in the bootcamp There are 10 sprints as Follow.
 - Essential ML
 - Python
 - Python for Data Analyst 
-- Dashvoard
+- Dashboard
