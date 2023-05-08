@@ -26,6 +26,7 @@ View(df)
 df %>%
   separate(votes, sep=" \\| ", into=c("votes", "gross", "tops")) %>%
   View()
+# มีสาเหตุที่ทำไมใช้ "\\|" ไปดูใน notions
 
 # ตัวอย่างเเละลองทำ static website
 specphone_url <- "https://specphone.com/Samsung-Galaxy-S23-5G.html"
