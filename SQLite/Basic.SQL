@@ -6,7 +6,7 @@ FROM customers
 SELECT 
 	name ,
     round(milliseconds/60000.0,2) 	as minute,
-		    bytes/(1024*1024) 					as mb
+	bytes/(1024*1024) 		as mb
 FROM tracks 
 limit 10;
 -- WHERE
@@ -16,20 +16,19 @@ SELECT
 	country,
 	email
 FROM customers
-WHERE country IN ('USA, 'Unoted Kingdom' , 'France' , 'Italy');
+WHERE country IN ('USA', 'Unoted Kingdom' , 'France' , 'Italy');
 --2
 SELECT 
-	firstname,
+    firstname,
     country,
     email
 from customers 
--- WHERE 
-customerid >= 1 AND customerid <= 5 
-where customerid BETWEEN 1 and 5 ;  --มีค่าเท่ากัน
+-- WHERE customerid >= 1 AND customerid <= 5 
+where customerid BETWEEN 1and5 ;  --มีค่าเท่ากัน
 --03
 SELECT *
 FROM table_name
-WHERE column1 = 'value1' AND column2 > 1000 OR column2 < 50; 
+WHERE (column1 = 'value1' AND column2 > 1000) OR column2 < 50; 
 -- LOWER & UPPER
 SELECT 
 	*
@@ -88,3 +87,5 @@ join genres    	as ge on tr.genreid		= ge.GenreId
 group BY ge.GenreId ,ge.name
 HAVING ge.Name like 's%'
 ORDER by no_tracks desc
+
+		  
