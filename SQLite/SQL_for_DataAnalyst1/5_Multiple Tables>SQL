@@ -1,0 +1,6 @@
+SELECT 
+	*
+FROM artists
+JOIN albums  --INNER JOIN
+on artists.ArtistId = albums.ArtistId
+WHERE artists.ArtistId =50
