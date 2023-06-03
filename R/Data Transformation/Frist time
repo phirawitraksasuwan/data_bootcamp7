@@ -1,0 +1,10 @@
+Package
+library(tidyverse)
+library(glue)
+library(sqldf)
+
+Detail Dataframe
+# เป็นฟังก์ชั่นที่ ควรใช้มากที่สุด
+glimpse(mtcars) 
+head(mtcars)
+tail(mtcars)
