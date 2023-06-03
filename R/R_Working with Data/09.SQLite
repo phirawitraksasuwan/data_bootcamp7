@@ -1,0 +1,28 @@
+# load library
+library(RSQLite)
+
+# connect to SQLite database (.db filr)
+
+# 1. open connection
+conn <- dbConnect(SQLite(), "chinook.db")
+# ประกาศตัวเเปร -> ใช้คำสั่งdbConnect ->(ประเภทของไฟล์(),"ชื่อไฟล์")
+
+# 2. get data 
+# ต้องรู้ว่ามี table อะไรอยู่ในตัว connectionตัวนี้บ้าง 
+dbListTables(conn)
+# dbListTable() -> คำสั่ง
+
+dbListFields(conn, "customers")
+# fields -> columns
+
+df <- dbGetQuery(conn, "select * from customers limit 5")
+View(df)
+
+df1 <- dbGetQuery(conn, "select * from customers where country = 'USA'")
+View(df1)
+
+df2 <- dbGetQuery(conn, "select * from customers where country = 'United Kingdom'")
+View(df2)
+
+# 3. close connectrion 
+dbDisconnect(conn)
