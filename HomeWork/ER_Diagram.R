@@ -1,4 +1,4 @@
-## dbdiagram
+## วิธีสร้าง Diagram ด้วย dbdiagram
 Table menu {
   Menu_ID int [PK]
   Menu_name varchar [not null]
