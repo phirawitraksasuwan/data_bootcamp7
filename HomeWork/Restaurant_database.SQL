@@ -185,3 +185,5 @@ select
     avg(Prics)
 from sub2 
 group by Order_date ;
+
+### https://dbdiagram.io/d/Restaurant_Project-63f1cc49296d97641d820947
